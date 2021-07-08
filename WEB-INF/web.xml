@@ -1,35 +1,49 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> 
-<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"> 
-    <!-- <servlet> 
-        <servlet-name>Demo</servlet-name> 
-        <servlet-class>DemoServlet</servlet-class>
-    </servlet>  
-    <servlet-mapping> 
-        <servlet-name>Demo</servlet-name> 
-        <url-pattern>/demo</url-pattern> 
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+
+    <servlet>
+        <servlet-name>Profile</servlet-name>
+        <jsp-file>/dashboard.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile</servlet-name>
+        <url-pattern>/profile/*</url-pattern>
     </servlet-mapping>
-    <servlet> 
-        <servlet-name>AddCookie</servlet-name> 
-        <servlet-class>AddCookieServlet</servlet-class>
-    </servlet>  
-    <servlet-mapping> 
-        <servlet-name>AddCookie</servlet-name> 
-        <url-pattern>/addcookie</url-pattern> 
-    </servlet-mapping> 
-    <servlet> 
-        <servlet-name>GetCookie</servlet-name> 
-        <servlet-class>GetCookieServlet</servlet-class>
-    </servlet>  
-    <servlet-mapping> 
-        <servlet-name>GetCookie</servlet-name> 
-        <url-pattern>/getcookie</url-pattern> 
+
+    <servlet>
+        <servlet-name>Details</servlet-name>
+        <jsp-file>/details.jsp</jsp-file>
+        <multipart-config>
+            <location>/tmp</location>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Details</servlet-name>
+        <url-pattern>/details/*</url-pattern>
     </servlet-mapping>
-    <servlet> 
-        <servlet-name>GenericDemo</servlet-name> 
-        <servlet-class>GeneralServletDemo</servlet-class> \
-    </servlet>  
-    <servlet-mapping> 
-        <servlet-name>GenericDemo</servlet-name> 
-        <url-pattern>/gdemo</url-pattern> 
-    </servlet-mapping> -->
+
+    <servlet>
+        <servlet-name>ChangeTemp</servlet-name>
+        <servlet-class>ChangeTemp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChangeTemp</servlet-name>
+        <url-pattern>/changetemp/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
